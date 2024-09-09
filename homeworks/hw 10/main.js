@@ -8,19 +8,20 @@ b.onclick = function (){
 //- створити інпут який приймає вік людини та кнопку яка підтверджує дію.
 // При натисканні на кнопку зчитати інформацію з інпуту та перевірити вік чи меньше він ніж 18,
 // та повідомити про це користувача
-let reading = document.getElementById('scnd_button');
-reading.onclick = function (){
-    let valueOfAge = document.getElementById('someText').value;
-    if (valueOfAge < 18){
-        document.getElementById(`Sorry you are too small`)
+let button = document.getElementById('confirmButton');
+button.onclick = function () {
+    let age = Number(document.getElementById('ageInput').value);
+    if (age < 18) {
+        alert('You are too young');
     }
-    else if(valueOfAge > 100){
-        document.write(`Are you sure you are alive?`)
+    else if (age > 100){
+        alert('Are you still alive?')
     }
-    else{
-        document.write(`You are good`)
+    else {
+        alert('Age confirmed');
     }
 }
+
 
 //Стоврити форму з трьома полями для name,surname,age та кнопкою. При натисканні на кнопку зчитати данні з полів,
 // та вивести об'єкт в документ.
